@@ -8,7 +8,7 @@ const App = () => {
   const [Error, setError] = useState(null)
   const fetchData = async (city) => {
     if (!city) return
-    const API_key = "03ca64e2033e4cbeda039ef24cb05172"
+    const API_key =import.meta.env.VITE_API_KEY
     try {
       const respone = await fetch(
         `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_key}`
